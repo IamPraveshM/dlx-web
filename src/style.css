@@ -1,0 +1,313 @@
+@font-face {
+  font-family: "Supreme";
+  src: url("./assets/Supreme-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Supreme";
+  src: url("./assets/Supreme-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FamiljenGrotesk";
+  src: url("./assets/Satoshi-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-family-supreme: "Supreme", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  --Secondary-font-family: "FamiljenGrotesk", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-supreme);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #111;
+}
+
+h2,
+h3.h4 {
+  font-family: var(--Secondary-font-family);
+  margin: 0;
+}
+
+/* Prevent elements from causing horizontal overflow */
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Utility class for responsive typography */
+.responsive-text {
+  font-size: clamp(1rem, 5vw, 1.2rem);
+  line-height: 1.2;
+}
+
+/* Optional helpers */
+.font-bold {
+  font-weight: 700;
+}
+.font-regular {
+  font-weight: 400;
+}
+
+/* body {
+  background-color: #0B132B;
+} */
+
+/* Responsive Only */
+@media (max-width: 1024px) {
+  .case-item {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+  }
+  .case-image {
+    min-height: 400px !important;
+  }
+  .cta-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    padding: 0 1.5rem !important;
+  }
+  .tab-navigation {
+    margin: 2rem 0 !important;
+  }
+  .tab-btn {
+    padding: 1rem 1.5rem !important;
+    font-size: 0.875rem !important;
+  }
+  .industries-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  .case-item {
+    padding: 3rem 0 !important;
+  }
+  .case-image {
+    min-height: 320px !important;
+  }
+  .section-cta {
+    padding: 3rem 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .industries-case-section {
+    padding: 2.5rem 0 !important;
+  }
+  .industry-card {
+    padding: 1.5rem !important;
+  }
+  .case-item {
+    padding: 2rem 0 !important;
+  }
+  .cta-inner {
+    padding: 0 1.5rem !important;
+  }
+}
+/* Process Section – Responsive Only */
+@media (max-width: 1024px) {
+  .process-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .process-section {
+    padding: 4rem 1rem !important;
+  }
+  .process-main-heading {
+    font-size: clamp(1.5rem, 5vw, 2rem) !important;
+  }
+  .process-subtitle {
+    font-size: 1.125rem !important;
+  }
+  .process-step-card {
+    padding: 1.75rem !important;
+  }
+  .process-step-card h3 {
+    font-size: 1.375rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .process-step-card {
+    padding: 1.5rem !important;
+  }
+  .process-step-card > div:first-child {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 0.9375rem !important;
+    top: 1.25rem !important;
+    right: 1.25rem !important;
+  }
+  .process-step-card > div:nth-child(2) {
+    width: 56px !important;
+    height: 56px !important;
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Blog Section – Fully Responsive */
+@media (max-width: 1024px) {
+  .featured-blog {
+    grid-template-columns: 1fr !important;
+  }
+  .featured-image-wrapper {
+    min-height: 350px !important;
+  }
+  .featured-content {
+    padding: 2rem !important;
+  }
+  .blog-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  }
+}
+
+/* Blog Section - Base styles (desktop) */
+.featured-blog {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  background: #FFFFFF;
+}
+.featured-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+}
+.featured-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.featured-content {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.featured-badge {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  padding: 0.5rem 1.25rem;
+  background: #3F37C9;
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: 4px;
+}
+.blog-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.blog-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.blog-content { padding: 2rem; }
+.blog-meta { display: flex; gap: 1.5rem; align-items: center; }
+.blog-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 1.5rem; border-top: 1px solid #E5E7EB; }
+.blog-card-footer { display: flex; justify-content: space-between; align-items: center; }
+
+@media (max-width: 768px) {
+  .blog-section {
+    padding: 4rem 1.5rem !important;
+  }
+  .blog-header {
+    margin-bottom: 3rem !important;
+  }
+  .featured-blog {
+    margin-bottom: 3rem !important;
+  }
+  .blog-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  .blog-content {
+    padding: 1.75rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-section {
+    padding: 3rem 1rem !important;
+  }
+  .featured-content {
+    padding: 1.5rem !important;
+  }
+  .blog-content {
+    padding: 1.5rem !important;
+  }
+  .blog-meta {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+  }
+  .blog-footer, .blog-card-footer {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    align-items: flex-start !important;
+  }
+  .read-more-btn, .view-all-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+
+
+
+
