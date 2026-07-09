@@ -311,3 +311,418 @@ svg {
 
 
 
+  .dlx-ecom-page {
+    font-family: Inter, Arial, sans-serif;
+    color: #0b1736;
+    background: #ffffff;
+  }
+
+  .dlx-container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+  }
+
+  .dlx-hero {
+    background:
+      radial-gradient(circle at top right, rgba(0, 123, 255, 0.25), transparent 35%),
+      linear-gradient(135deg, #021b46 0%, #063c8c 55%, #007bff 100%);
+    padding: 110px 0 90px;
+    color: #ffffff;
+    overflow: hidden;
+  }
+
+  .dlx-hero-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .dlx-eyebrow {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #0a66ff;
+    margin-bottom: 14px;
+  }
+
+  .dlx-hero .dlx-eyebrow,
+  .dlx-dark .dlx-eyebrow {
+    color: #7bc4ff;
+  }
+
+  .dlx-hero h1 {
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 0.95;
+    letter-spacing: -3px;
+    margin: 0 0 24px;
+    max-width: 850px;
+  }
+
+  .dlx-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+    max-width: 680px;
+    margin-bottom: 32px;
+  }
+
+  .dlx-hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .dlx-btn-primary,
+  .dlx-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 24px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.25s ease;
+  }
+
+  .dlx-btn-primary {
+    background: #ffffff;
+    color: #063c8c;
+  }
+
+  .dlx-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+  }
+
+  .dlx-btn-secondary {
+    color: #ffffff;
+    border: 1px solid rgba(255,255,255,0.35);
+  }
+
+  .dlx-btn-secondary:hover {
+    background: rgba(255,255,255,0.12);
+  }
+
+  .dlx-hero-card {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 28px;
+    padding: 34px;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 24px 70px rgba(0,0,0,0.2);
+  }
+
+  .dlx-card-line {
+    width: 64px;
+    height: 5px;
+    border-radius: 20px;
+    background: #7bc4ff;
+    margin-bottom: 24px;
+  }
+
+  .dlx-hero-card h3 {
+    font-size: 26px;
+    margin: 0 0 18px;
+  }
+
+  .dlx-hero-card ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .dlx-hero-card li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.14);
+    color: rgba(255,255,255,0.9);
+  }
+
+  .dlx-toc {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: #ffffff;
+    border-bottom: 1px solid #e8eef8;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px 20px;
+    overflow-x: auto;
+  }
+
+  .dlx-toc a {
+    white-space: nowrap;
+    color: #0b1736;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .dlx-toc a:hover {
+    color: #0a66ff;
+  }
+
+  .dlx-section {
+    padding: 92px 0;
+  }
+
+  .dlx-light {
+    background: #f4f8ff;
+  }
+
+  .dlx-dark {
+    background: #031b3f;
+    color: #ffffff;
+  }
+
+  .dlx-section-head {
+    max-width: 760px;
+    margin-bottom: 42px;
+  }
+
+  .dlx-section-head h2 {
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.05;
+    letter-spacing: -1.8px;
+    margin: 0 0 18px;
+  }
+
+  .dlx-section-head p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #52627a;
+  }
+
+  .light-text p {
+    color: rgba(255,255,255,0.74);
+  }
+
+  .dlx-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .dlx-service-card,
+  .dlx-tech-card,
+  .dlx-solution-box,
+  .dlx-stack-grid > div,
+  .dlx-process > div {
+    background: #ffffff;
+    border: 1px solid #e5edf8;
+    border-radius: 24px;
+    padding: 28px;
+    transition: 0.25s ease;
+  }
+
+  .dlx-service-card:hover,
+  .dlx-tech-card:hover,
+  .dlx-solution-box:hover,
+  .dlx-stack-grid > div:hover,
+  .dlx-process > div:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 55px rgba(10, 102, 255, 0.12);
+  }
+
+  .dlx-service-card span,
+  .dlx-process span {
+    display: inline-flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e9f2ff;
+    color: #0a66ff;
+    font-weight: 800;
+    margin-bottom: 18px;
+  }
+
+  .dlx-service-card h3,
+  .dlx-tech-card h3,
+  .dlx-solution-box h3,
+  .dlx-stack-grid h3,
+  .dlx-process h3 {
+    margin: 0 0 12px;
+    font-size: 22px;
+  }
+
+  .dlx-service-card p,
+  .dlx-tech-card p,
+  .dlx-process p {
+    color: #52627a;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .dlx-solution-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .dlx-solution-box ul,
+  .dlx-tab-content ul {
+    margin: 0;
+    padding-left: 18px;
+    color: #52627a;
+    line-height: 2;
+  }
+
+  .dlx-platform-tabs {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+  }
+
+  .dlx-tab {
+    border: 1px solid #d9e6f8;
+    background: #ffffff;
+    color: #0b1736;
+    padding: 13px 22px;
+    border-radius: 999px;
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+  .dlx-tab.active {
+    background: #0a66ff;
+    color: #ffffff;
+    border-color: #0a66ff;
+  }
+
+  .dlx-tab-content {
+    display: none;
+    background: #ffffff;
+    border: 1px solid #e5edf8;
+    border-radius: 26px;
+    padding: 34px;
+  }
+
+  .dlx-tab-content.active {
+    display: block;
+  }
+
+  .dlx-tab-content h3 {
+    font-size: 30px;
+    margin: 0 0 12px;
+  }
+
+  .dlx-tab-content p {
+    color: #52627a;
+    line-height: 1.7;
+  }
+
+  .dlx-dark .dlx-tech-card {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.14);
+  }
+
+  .dlx-dark .dlx-tech-card p {
+    color: rgba(255,255,255,0.76);
+  }
+
+  .dlx-process {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .dlx-stack-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .dlx-stack-grid p {
+    color: #52627a;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .dlx-faq {
+    display: grid;
+    gap: 14px;
+  }
+
+  .dlx-faq-item {
+    border: 1px solid #e5edf8;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #ffffff;
+  }
+
+  .dlx-faq-item button {
+    width: 100%;
+    text-align: left;
+    padding: 22px 24px;
+    border: 0;
+    background: #ffffff;
+    color: #0b1736;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+  .dlx-faq-item p {
+    display: none;
+    padding: 0 24px 24px;
+    margin: 0;
+    color: #52627a;
+    line-height: 1.7;
+  }
+
+  .dlx-faq-item.active p {
+    display: block;
+  }
+
+  .dlx-cta {
+    background: linear-gradient(135deg, #0a66ff, #021b46);
+    color: #ffffff;
+    text-align: center;
+    padding: 80px 0;
+  }
+
+  .dlx-cta h2 {
+    font-size: clamp(34px, 4vw, 56px);
+    letter-spacing: -1.8px;
+    margin: 0 0 14px;
+  }
+
+  .dlx-cta p {
+    max-width: 620px;
+    margin: 0 auto 28px;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 900px) {
+    .dlx-hero-grid,
+    .dlx-grid-3,
+    .dlx-solution-wrap,
+    .dlx-process,
+    .dlx-stack-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .dlx-hero {
+      padding: 80px 0 60px;
+    }
+
+    .dlx-hero h1 {
+      letter-spacing: -1.8px;
+    }
+
+    .dlx-section {
+      padding: 68px 0;
+    }
+
+    .dlx-toc {
+      justify-content: flex-start;
+    }
+  }

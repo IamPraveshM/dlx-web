@@ -7,7 +7,7 @@ import CaseStudySection from "../components/HomePage/IndustriesAndCaseStudies";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ThirdCardImage from "../assets/HeroThird.png";
-import ProfileImg from "../assets/profile.png";
+import ProfileImg from "../assets/Profile.png";
 import ServiceSection from "../components/HomePage/Service";
 import WhoWeAre from "../components/HomePage/WhoWeAre";
 import TestimonialSection from "../components/HomePage/TestimonialSection";
