@@ -441,12 +441,15 @@ function ServiceCard({ title, description, slug }) {
 export default function ServicesPage() {
   const { services, loading, error } = useServices();
   const hasServices = services.length > 0;
+  
+  // This correctly maps your database rows to the card format
   const howWeHelpServices = services.map((service) => ({
     id: service.id,
-    title: service.title || service.hero_heading || 'Untitled service',
+    title: service.title || 'Untitled service',
+    
+    // Uses the new short_description first, falls back to hero_description if empty
     description:
       service.short_description ||
-      service.hero_subtitle ||
       service.hero_description ||
       'Explore this service to see how Dream LogicX can support your business.',
     slug: service.slug,

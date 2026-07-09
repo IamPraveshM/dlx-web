@@ -18,7 +18,8 @@ export function useServices() {
 
       try {
         const { data, error } = await supabase
-          .from('services')
+          // CHANGED: We now target the new advanced table
+          .from('dynamic_services') 
           .select('*')
           .eq('is_published', true)
           .order('created_at', { ascending: true });
