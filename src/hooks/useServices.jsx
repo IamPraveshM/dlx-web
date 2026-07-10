@@ -18,16 +18,19 @@ export function useServices() {
 
       try {
         const { data, error } = await supabase
-          // CHANGED: We now target the new advanced table
           .from('dynamic_services') 
           .select('*')
           .eq('is_published', true)
-          .order('created_at', { ascending: true });
+          // FIX 1: Changed from 'created_at' to 'title' because created_at doesn't exist in the new table!
+          .order('title', { ascending: true });
 
         if (error) throw error;
+        
         setServices(data ?? []);
       } catch (err) {
-        setError(err instanceof Error ? err.message : String(err));
+        // FIX 2: Correctly log the Supabase JSON error object so it doesn't say [object Object]
+        console.error("Supabase Fetch Error:", err);
+        setError(err.message || "Failed to load services. Please check the console.");
       } finally {
         setLoading(false);
       }
